@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="main.js"></script>
+</head>
+<body>
+	<div class="fader"></div>
+	<h2>JavaScript Projects</h2>
+	<div></div>
+	<div class="panel panel-default">
+			<div class="btn btn-default" onclick="addTask(this)">Add task</div>
+			<table class="table">
+				<thead>
+					<tr>
+					<th>task_id</th>
+					<th>Subject</th>
+					<th>Text</th>
+					<th>User</th>
+					<th><a href="#/new"><i class="icon-plus-sign"></i></a></th>
+					</tr>
+				</thead>
+				<tbody id="tasks_list">
+				</tbody>
+			</table>
+
+	<form class="col-xs-3 modal-box">
+		<div class="form-group">
+			<label>Subject</label>
+			<input type="text" id="subject" class="form-control" placeholder="Subject" value="">
+		</div>
+		<div class="form-group">
+			<label>Text</label>
+			<textarea class="form-control" id="text"  placeholder="Search" value=""></textarea>
+		</div>
+		<input type="hidden" id="task_id">
+		<button type="button" id="save" class="btn btn-success" onclick="saveTask(this)">Submit</button>
+		<button type="button" id="cancel" class="btn btn-danger" onclick="closeEdit(this)">Cancel</button>
+	</form>
+
+	</div>
+
+</body>
+</html>
